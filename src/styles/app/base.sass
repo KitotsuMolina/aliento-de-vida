@@ -1,0 +1,71 @@
+@import "fonts"
+
+.kitotsu-main
+  background: white
+  width: 100vw
+  color: black
+  height: 100vh
+  overflow-y: scroll
+  overflow-x: hidden
+  &::-webkit-scrollbar
+    display: none
+
+video
+  object-fit: cover
+
+.kito-banner
+  position: relative
+
+
+.kito-banner-over
+  top: 0px
+  width: 100% !important
+  max-width: 100% !important
+  height: 100%
+  position: absolute
+  padding-top: 3em
+  padding-left: 0px !important
+  padding-right: 0px !important
+  background: linear-gradient(0deg, rgba(25, 27, 38, .32), rgba(25, 27, 38, .72))
+
+.kito-banner-text
+  @include font-lora-banner
+  margin: 0 auto
+  width: max-content
+  font-size: 5em
+
+.kito-banner-marquee
+  @include font-lora-banner
+  font-style: italic
+  position: absolute !important
+  bottom: .8em
+  font-size: 1.5em
+
+.kito-reproductor
+  margin: 3em auto !important
+  width: max-content
+  padding: 1em
+  border-radius: 1em
+  background: rgb(2,0,36)
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)
+
+.kito-subtitle
+  @include font-lora-banner
+  color: black
+  font-weight: bold
+  font-size: 1.5em
+
+.kito-info
+  @include font-lora-banner
+  color: black
+  font-weight: bold
+  font-size: 1em
+  background-color: aliceblue
+  border-radius: .5em
+  padding: .5em
+  box-shadow: 0 0 10px 5px rgba(9,9,121,0.1), 0 0 10px 8px rgba(0,212,255,0.1)
+
+.kito-content
+  background-color: #f9f9f9 !important
+  padding-top: .5em
+  padding-bottom: .5em
