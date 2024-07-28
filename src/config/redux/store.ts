@@ -5,3 +5,5 @@ export const store_root = configureStore({
         counter: counterReducer,
     },
 })
+
+export type RootState = ReturnType<typeof store_root.getState>;

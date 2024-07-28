@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import {Button, Card } from "@nextui-org/react";
+import {Button} from "@nextui-org/react";
 import { Box, keyframes } from '@mui/system';
 import {
     NextBoldIcon,
@@ -115,25 +115,25 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
 
                 {controls?
                     <>
-                        <Button disabled={controls} auto flat onClick={handlePrevious}>
+                        <Button disabled={controls} onClick={handlePrevious}>
                             <PreviousBoldIcon size={24} />
                         </Button>
-                        <Button auto flat onClick={handlePlayPause}>
+                        <Button  onClick={handlePlayPause}>
                             {isPlaying ? <PauseCircleBoldIcon size={24} /> : <PlayBoldIcon size={24} />}
                         </Button>
-                        <Button auto disabled={controls} flat onClick={handleNext}>
+                        <Button disabled={controls}  onClick={handleNext}>
                             <NextBoldIcon size={24} />
                         </Button>
-                        <Button auto disabled={controls} flat onClick={handleShuffle}>
+                        <Button disabled={controls}  onClick={handleShuffle}>
                             <ShuffleBoldIcon size={24} />
                         </Button>
-                        <Button auto disabled={controls} flat onClick={handleRepeat}>
+                        <Button disabled={controls}  onClick={handleRepeat}>
                             <RepeatOneBoldIcon size={24} />
                         </Button>
                     </>
                     :
                     <>
-                        <Button auto flat onClick={handlePlayPause}>
+                        <Button  onClick={handlePlayPause}>
                             {isPlaying ? <PauseCircleBoldIcon size={24} /> : <PlayBoldIcon size={24} />}
                         </Button>
                         <div style={{

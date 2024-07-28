@@ -1,8 +1,8 @@
+
 import {
     createBrowserRouter
 } from "react-router-dom";
 import Page from "@page/Page.tsx";
-import React from "react";
 import ErrorPage from "@config/404/error-page.tsx";
 import {Counter} from "@example/examplePage.tsx";
 

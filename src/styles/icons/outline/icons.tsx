@@ -1,4 +1,8 @@
-export const PauseCircleBoldIcon = ({size}) => (
+interface props {
+    size:number;
+}
+
+export const PauseCircleBoldIcon = ({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} height={size} width={size} stroke="currentColor"
          className="size-6">
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -7,7 +11,7 @@ export const PauseCircleBoldIcon = ({size}) => (
 
 )
 
-export const NextBoldIcon =({size}) => (
+export const NextBoldIcon =({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height={size} width={size} stroke="currentColor"
          className="size-6">
         <path stroke-linecap="round" stroke-linejoin="round"
@@ -15,7 +19,7 @@ export const NextBoldIcon =({size}) => (
     </svg>
 
 )
-export const PreviousBoldIcon = ({size}) => (
+export const PreviousBoldIcon = ({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} height={size} width={size} stroke="currentColor"
          className="size-6">
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -24,7 +28,7 @@ export const PreviousBoldIcon = ({size}) => (
 
 )
 
-export const RepeatOneBoldIcon = ({size}) => (
+export const RepeatOneBoldIcon = ({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} height={size} width={size} stroke="currentColor"
          className="size-6">
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -33,7 +37,7 @@ export const RepeatOneBoldIcon = ({size}) => (
 
 )
 
-export const ShuffleBoldIcon = ({size}) => (
+export const ShuffleBoldIcon = ({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} height={size} width={size} stroke="currentColor"
          className="size-6">
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -41,7 +45,7 @@ export const ShuffleBoldIcon = ({size}) => (
     </svg>
 )
 
-export const PlayBoldIcon = ({size}) => (
+export const PlayBoldIcon = ({size}:props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} height={size} width={size} stroke="currentColor"
          className="size-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
