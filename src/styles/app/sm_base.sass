@@ -1,0 +1,40 @@
+$small-screen: 576px
+$medium-screen: 768px
+$large-screen: 992px
+
+
+// Estilos para dispositivos pequeños
+@media (max-width: $small-screen) 
+  .kito-banner-text
+    font-size: 3em !important
+
+  .kito-info
+    height: 8em !important
+    padding: 1.1em 1.1em !important
+
+  .kito-new-text
+    width: 100% !important
+    font-size: 1.1em !important
+
+  .kito-new-title
+    margin-bottom: 0 !important
+
+  .kito-card-container
+    width: max-content !important
+
+
+
+
+
+// Estilos para dispositivos medianos
+@media (min-width: $small-screen) and (max-width: $medium-screen) 
+  .kito-banner-text
+    font-size: 4em !important
+
+
+
+// Estilos para dispositivos grandes
+@media (min-width: $medium-screen) 
+  .kito-banner-text
+    font-size: 5em !important
+
