@@ -23,8 +23,8 @@ const NewsComponent: React.FC = () =>{
             </Container>
             <div className={'kito-news-container'}
             >
-                {[...Array(4)].map((x, i) =>
-                    <CardComponent key={i} x={i}/>
+                {[...Array(4)].map((_x, i) =>
+                    <CardComponent key={i} id={i}/>
                 )}
             </div>
 

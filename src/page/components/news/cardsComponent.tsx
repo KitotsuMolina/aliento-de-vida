@@ -1,15 +1,15 @@
 import React from "react";
 import book from '@assets/images/book.jpg';
 interface props {
-    x: number
+    id: number
 }
 
-const CardComponent: React.FC = ({x}:props) =>{
+const CardComponent: React.FC<props> = ({id}) =>{
     return (
         <>
             <div style={{backgroundImage: `url(${book})`}} className="kito-card-container flex justify-end">
                 <div className="kito-card">
-                    <p className="kito-card-title">Noticia {x}</p>
+                    <p className="kito-card-title">Noticia {id}</p>
                     <p className="kito-small-desc">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
                         veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
