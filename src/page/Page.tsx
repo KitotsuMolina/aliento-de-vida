@@ -7,6 +7,7 @@ import video2 from "@assets/videos/video2.mp4";
 import useWindowSize from "@utils/useWindowSize.tsx";
 import MusicPlayer from "@page/components/radio/musicPlayer.tsx";
 import {Container} from "@mui/material";
+import NewsComponent from "@page/components/news/newsComponent.tsx";
 function Page() {
     const {width} = useWindowSize();
     const videoUrls = [video1, video2];
@@ -34,9 +35,9 @@ function Page() {
                     <br/>
                     {versic.text}
                 </p>
-                <br/>
                 <p className={"kito-subtitle"}>Noticias</p>
                 <hr/>
+                <NewsComponent />
             </Container>
 
         </div>
