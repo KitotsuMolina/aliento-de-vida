@@ -21,16 +21,14 @@ function Page() {
 
   return (
         <div className={"kitotsu-main"}>
+            <MusicPlayer type={"podcast"} url={url} controls={false}/>
             <BannerComponent
                 videoUrls={videoUrls}
                 width={`${width}px`}
                 height="360px"
                 interval={10} // Change video every 10 seconds
             />
-            <Container maxWidth="md" className={"kito-content"}>
-                <p className={"kito-subtitle"}>Escucha podcast en vivo</p>
-                <hr/>
-                <MusicPlayer type={"podcast"} url={url} controls={false}/>
+            <Container maxWidth="lg" className={"kito-content"}>
                 <p className={"kito-info"}>
                     {versic.title}
                     <br/>

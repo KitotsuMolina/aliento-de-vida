@@ -17,22 +17,65 @@ export interface MusicPlayerProps  {
 }
 const boxShadowAnimation = keyframes`
     0% {
-        box-shadow: 0 0 15px 8px rgba(2,0,36,0.5), 0 0 20px 15px rgba(9,9,121,0.5);
+        box-shadow: 0 0 10px 6px rgba(2,0,36,0.2), 0 0 10px 6px rgba(9,9,121,0.2);
     }
     25% {
-        box-shadow: 0 0 15px 8px rgba(9,9,121,0.5), 0 0 20px 15px rgba(0,212,255,0.5);
+        box-shadow: 0 0 10px 6px rgba(9,9,121,0.2), 0 0 10px 6px rgba(0,212,255,0.2);
     }
     50% {
-        box-shadow: 0 0 15px 8px rgba(0,212,255,0.5), 0 0 20px 15px rgba(2,0,36,0.5);
+        box-shadow: 0 0 10px 6px rgba(0,212,255,0.2), 0 0 10px 6px rgba(2,0,36,0.2);
     }
     75% {
-        box-shadow: 0 0 15px 8px rgba(2,0,36,0.5), 0 0 20px 15px rgba(9,9,121,0.5);
+        box-shadow: 0 0 10px 6px rgba(2,0,36,0.2), 0 0 10px 6px rgba(9,9,121,0.2);
     }
     100% {
-        box-shadow: 0 0 15px 8px rgba(9,9,121,0.5), 0 0 20px 15px rgba(0,212,255,0.5);
+        box-shadow: 0 0 10px 6px rgba(9,9,121,0.2), 0 0 10px 6px rgba(2,0,36,0.2);
     }
 `;
 
+
+const backgroundAnimation = keyframes`
+    0% {
+        color: rgba(2,0,36,1);
+    }
+    20% {
+        color: rgba(9,9,121,1);
+    }
+    40% {
+        color: rgba(0,212,255,1);
+    }
+    60% {
+        color: rgba(2,0,36,1);
+    }
+    80% {
+        color: rgba(9,9,121,1);
+    }
+    100% {
+        color: rgba(0,212,255,1);
+    }
+`;
+
+const waveAnimation = keyframes`
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 128, 255, 0.7), 0 0 0 10px rgba(0, 128, 255, 0.1), 0 0 0 20px rgba(0, 128, 255, 0.1), 0 0 0 30px rgba(0, 128, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(0, 128, 255, 0), 0 0 0 20px rgba(0, 128, 255, 0.7), 0 0 0 30px rgba(0, 128, 255, 0.1), 0 0 0 40px rgba(0, 128, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 128, 255, 0.7), 0 0 0 10px rgba(0, 128, 255, 0.1), 0 0 0 20px rgba(0, 128, 255, 0.1), 0 0 0 30px rgba(0, 128, 255, 0.1);
+    }
+`;
+
+// Animación de Escalado del Botón
+const scaleAnimation = keyframes`
+    0%, 100% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+`;
 const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isShuffle, setIsShuffle] = useState(false);
@@ -103,12 +146,11 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
 
     return (
         <Box className={"kito-reproductor"}
-            sx={{
-                background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)',
-                margin: '100px auto',
+            sx={isPlaying?{
+                //background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)',
                 animation: `${boxShadowAnimation} 4s linear infinite`,
-                borderRadius: '8px', // Optional: Add rounded corners
-            }}
+
+            }:{}}
         >
             <audio ref={audioRef} src={url}/>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
@@ -118,8 +160,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
                         <Button disabled={controls} onClick={handlePrevious}>
                             <PreviousBoldIcon size={24} />
                         </Button>
-                        <Button  onClick={handlePlayPause}>
-                            {isPlaying ? <PauseCircleBoldIcon size={24} /> : <PlayBoldIcon size={24} />}
+                        <Button   className={'kito-btn-player'}   onClick={handlePlayPause}>
+                            {isPlaying ? <PauseCircleBoldIcon  size={50} /> : <PlayBoldIcon  size={50} />}
                         </Button>
                         <Button disabled={controls}  onClick={handleNext}>
                             <NextBoldIcon size={24} />
@@ -133,14 +175,16 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
                     </>
                     :
                     <>
-                        <Button  onClick={handlePlayPause}>
-                            {isPlaying ? <PauseCircleBoldIcon size={24} /> : <PlayBoldIcon size={24} />}
-                        </Button>
+                        <Box sx={!isPlaying?{
+                            animation: `${waveAnimation} 2s infinite, ${scaleAnimation} 2s infinite`,
+                        }:{}}  className={'kito-btn-player'}  onClick={handlePlayPause}>
+                            {isPlaying ? <PauseCircleBoldIcon size={50} /> : <PlayBoldIcon size={50} />}
+                        </Box>
                         <div style={{
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'space-between',
-                            width: '100%',
+                            width: '60%',
                             padding: '10px'
                         }}>
                             <span>{formatTime(currentTime)}</span>

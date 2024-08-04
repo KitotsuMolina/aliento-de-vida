@@ -41,13 +41,24 @@ video
   bottom: .8em
   font-size: 1.5em
 
+.kito-btn-player
+  background-color: transparent
+  border-radius: 16em
+  height: 50px
+  color: rgba(0, 128, 255, 0.7)
+  &:focus
+    outline: none
+
 .kito-reproductor
-  margin: 3em auto !important
-  width: max-content
-  padding: 1em
-  border-radius: 1em
-  background: rgb(2,0,36)
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)
+  padding: .5em
+  box-shadow: 0 0 10px 6px rgba(0,212,255,0.2)
+  position: fixed
+  bottom: 0
+  width: 100vw
+  left: 0
+  background: white
+  color: black
+  //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)
 
 .kito-subtitle
   @include font-lora-banner
@@ -57,15 +68,14 @@ video
 
 .kito-info
   @include font-lora-banner
-  color: black
+  color: rgba(0,212,255,1)
   font-weight: bold
   font-size: 1em
   background-color: aliceblue
   border-radius: .5em
   padding: .5em
-  box-shadow: 0 0 10px 5px rgba(9,9,121,0.1), 0 0 10px 8px rgba(0,212,255,0.1)
+  //box-shadow: 0 0 10px 5px rgba(9,9,121,0.1), 0 0 10px 8px rgba(0,212,255,0.1)
 
 .kito-content
   background-color: #f9f9f9 !important
-  padding-top: .5em
-  padding-bottom: .5em
+  padding: .5em 0
