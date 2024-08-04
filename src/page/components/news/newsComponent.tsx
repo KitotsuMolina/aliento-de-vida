@@ -6,9 +6,10 @@ import book from '@assets/images/book.jpg';
 
 const NewsComponent: React.FC = () =>{
 
+    const url = book
     return (
         <>
-            <Container style={{backgroundImage: `url(${book})`}} className={'kito-new'}>
+            <Container style={{backgroundImage: `url(${url})`}} className={'kito-new'}>
                 <div className={'kito-new-over '}>
                     <div className={'kito-new-info'}>
                         <p className={'kito-new-title'}>Noticia Principal</p>

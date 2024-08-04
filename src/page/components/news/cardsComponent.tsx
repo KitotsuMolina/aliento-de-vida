@@ -5,9 +5,11 @@ interface props {
 }
 
 const CardComponent: React.FC<props> = ({id}) =>{
+
+    const url = book
     return (
         <>
-            <div style={{backgroundImage: `url(${book})`}} className="kito-card-container flex justify-end">
+            <div style={{backgroundImage: `url(${url})`}} className="kito-card-container flex justify-end">
                 <div className="kito-card">
                     <p className="kito-card-title">Noticia {id}</p>
                     <p className="kito-small-desc">
