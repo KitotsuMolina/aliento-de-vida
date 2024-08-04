@@ -34,7 +34,7 @@ const boxShadowAnimation = keyframes`
 `;
 
 
-const backgroundAnimation = keyframes`
+/*const backgroundAnimation = keyframes`
     0% {
         color: rgba(2,0,36,1);
     }
@@ -53,7 +53,7 @@ const backgroundAnimation = keyframes`
     100% {
         color: rgba(0,212,255,1);
     }
-`;
+`;*/
 
 const waveAnimation = keyframes`
     0% {
