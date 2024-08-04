@@ -2,15 +2,14 @@
 import '@/src/page/Page.css'
 import '@styles/main.scss'
 import BannerComponent from "@page/components/banner/bannerComponent.tsx";
-import video1 from "@assets/videos/video1.mp4";
-import video2 from "@assets/videos/video2.mp4";
+import video5 from "@assets/videos/video5.mp4";
 import useWindowSize from "@utils/useWindowSize.tsx";
 import MusicPlayer from "@page/components/radio/musicPlayer.tsx";
 import {Container} from "@mui/material";
 import NewsComponent from "@page/components/news/newsComponent.tsx";
 function Page() {
     const {width} = useWindowSize();
-    const videoUrls = [video1, video2];
+    const videoUrls = [video5];
     const url = "https://a1.asurahosting.com:8410/radio.mp3"
 
     const versic = {
