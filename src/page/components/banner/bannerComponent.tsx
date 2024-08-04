@@ -36,6 +36,7 @@ const BannerComponent: React.FC<VideoPlayerProps> = ({ videoUrls, width, height 
                 autoPlay
                 muted
                 loop
+                playsInline={true}
                 src={videoUrls[0]}
             />
             <Container className={"kito-banner-over flex justify-center justify-items-center"}>
