@@ -1,6 +1,6 @@
 @import "fonts"
 
-.kito-card-title
+.kito-card-fit-title
   @include font-lora-banner
   color: #262626
   font-size: 1.5em
@@ -9,7 +9,7 @@
   margin-bottom: 0.5em
 
 
-.kito-small-desc
+.kito-small-desc-fit
   @include font-lora-banner
   font-size: 1em
   font-weight: 400
@@ -18,11 +18,11 @@
   text-align: justify
 
 
-.kito-small-desc
+.kito-small-desc-fit
   font-size: 1em
 
 
-.kito-go-corner
+.kito-go-corner-fit
   display: flex
   align-items: center
   justify-content: center
@@ -36,21 +36,22 @@
   border-radius: 0 4px 0 32px
 
 
-.kito-go-arrow
+.kito-go-arrow-fit
   margin-top: -4px
   margin-right: -4px
   color: white
   font-family: courier, sans
 
 
-.kito-card
+.kito-card-fit
   display: block
   position: relative
-  max-width: 300px
+  max-width: 100%
+  margin: .5em 1em
   max-height: 320px
   background-color: #f2f8f9
-  border-radius: 10px
-  padding: 2em 1.2em
+  border-radius: 3px
+  padding: .5em 1.2em
   text-decoration: none
   z-index: 0
   overflow: hidden
@@ -58,35 +59,44 @@
   font-family: Arial, Helvetica, sans-serif
 
 
-.kito-card:before
+.kito-card-fit:before
   content: ''
   position: absolute
   z-index: -1
-  top: -16px
-  right: -16px
+  top: -1px
+  right: -25px
   background: linear-gradient(135deg, #364a60, #384c6c)
-  height: 32px
+  height: 100%
   width: 32px
-  border-radius: 32px
-  transform: scale(1)
+  //border-radius: 32px
+  transform: skew(25deg, 0deg)
   transform-origin: 50% 50%
-  transition: transform 0.35s ease-out
+  transition: width 0.35s ease-out
 
 
-.kito-card:hover:before
-  transform: scale(28)
+.kito-card-fit:hover:before
+  height: 100%
+  width: 48%
+  transform: skew(25deg, 0deg)
 
 
-.kito-card:hover .kito-small-desc
+/*.kito-card-fit:hover .kito-small-desc-fit
   transition: all 0.5s ease-out
   color: rgba(255, 255, 255, 0.8)
 
 
-.kito-card:hover .kito-card-title
+/*.kito-card-fit:hover .kito-card-fit-title
   transition: all 0.5s ease-out
   color: #ffffff
 
-.kito-card-container
+.kito-card-fit:hover .kito-card-icon-whatsapp
+  transition: all 1s ease-out
+  fill: #c2f8b5
+
+.kito-card-icon-whatsapp
+  transition: all .6s ease-out
+
+.kito-card-fit-container
   background-repeat: no-repeat
   background-size: 100% 100%
   border-radius: 10px
@@ -94,3 +104,28 @@
   width: 34em
   display: flex
   justify-content: end
+
+.kito-card-icon-fit
+  display: flex !important
+  flex-direction: row
+  align-content: center
+  flex-wrap: wrap
+  position: absolute
+  top: 10px
+  right: 66px
+
+
+.kito-text-card-icon
+  @include font-lora-banner
+  transition: all .6s ease-out
+  font-size: 1.6em
+  align-content: center
+  margin-right: 2em
+  color: transparent
+
+
+.kito-card-fit:hover .kito-text-card-icon
+  transition: all 1s ease-out
+  color: white
+
+
