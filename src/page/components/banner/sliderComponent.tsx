@@ -10,7 +10,7 @@ import {ArrowNextBoldIcon, ArrowPrevBoldIcon} from "@icons/outline/icons.tsx";
 
 const SliderComponent: React.FC = () => {
     var anuncios = [anunciate01,anunciate02,anunciate03];
-    const customPaging =  (i) => {
+    const customPaging =  (i:number) => {
         return (
             <a className={'kito-img-slider-preview-a'}>
                 <img className={'kito-img-slider-preview'} src={`${anuncios[i]}`} alt={`${i}`}/>
@@ -18,12 +18,12 @@ const SliderComponent: React.FC = () => {
         );
     }
 
-    const SamplePrevArrow:(props:never) => React.JSX.Element | undefined  = (props) => {
+    const SamplePrevArrow  = (props:{className?:string,style?:JSON, onClick?: ()=>NonNullable<unknown>}) => {
         const { className, style, onClick } = props;
         return <div className={className} style={{ ...style, display: "block" }} onClick={onClick}><ArrowPrevBoldIcon size={50} /></div>;
     }
 
-    const  SampleNextArrow:(props:never) => React.JSX.Element | undefined = (props) => {
+    const  SampleNextArrow = (props:{className?:string,style?:JSON, onClick?: ()=>NonNullable<unknown>}) => {
         const { className, style, onClick } = props;
         return <div className={className} style={{ ...style, display: "block" }} onClick={onClick}><ArrowNextBoldIcon  size={50}/></div>;
     }
