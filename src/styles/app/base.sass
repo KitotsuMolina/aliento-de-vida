@@ -62,12 +62,12 @@ video
 //box-shadow: 0 0 10px 5px rgba(9,9,121,0.1), 0 0 10px 8px rgba(0,212,255,0.1)
 
 .kito-content
+  padding-bottom: 4em
   background-color: #f9f9f9 !important
   padding-top: .5em
-  padding-bottom: .5em
   padding-left: 0 !important
   padding-right: 0 !important
-  margin-bottom: 5em
+  margin-bottom: 6em
 
 .kito-news-container
   box-sizing: border-box
@@ -130,9 +130,82 @@ video
   color: white
   font-size: 1.5em
   width: 30em
+
 .kito-new-info
   align-items: end
   text-align: justify
   display: flex
   flex-direction: column
   padding: 0 2em
+
+.kito-text
+  @include font-lora-banner
+  color: black
+  font-size: 1em
+  width: 30em
+  padding: 1em
+
+.kito-img-slider
+  width: 20em
+  height: 20em
+  margin: 0 auto
+
+.kito-img-slider-preview
+  width: 4em
+
+
+.slick-dots
+  display: flex !important
+  flex-wrap: nowrap
+  justify-content: space-evenly
+  align-items: center
+
+.slick-arrow
+  height: 100%
+  width: 91px
+  z-index: 99
+
+.slick-prev
+
+  background: rgb(0,185,195)
+  background: linear-gradient(90deg, rgba(0,185,195,1) 20%, rgba(3,205,203,0.5942752100840336) 44%, rgba(0,212,255,0.4318102240896359) 73%, rgba(0,212,255,0.01724439775910369) 100%)
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 0px
+  border-top-left-radius: 5px
+  border-top-right-radius: 0px
+  left: 2em
+
+.slick-prev svg
+  fill: white
+  position: absolute
+  left: 0
+  top: 40%
+.slick-next svg
+  fill: white
+  position: absolute
+  right: 0
+  top: 40%
+
+.slick-next
+  background: rgb(0,185,195)
+  background: linear-gradient(270deg, rgba(0,185,195,1) 20%, rgba(3,205,203,0.5942752100840336) 44%, rgba(0,212,255,0.4318102240896359) 73%, rgba(0,212,255,0.01724439775910369) 100%)
+  border-bottom-left-radius: 0px
+  border-bottom-right-radius: 5px
+  border-top-left-radius: 0px
+  border-top-right-radius: 5px
+  right: 2em
+
+.slick-next:hover, .slick-next:focus
+  background: rgb(0,185,195)
+  background: linear-gradient(270deg, rgba(0,185,195,1) 20%, rgba(3,205,203,0.5942752100840336) 44%, rgba(0,212,255,0.4318102240896359) 73%, rgba(0,212,255,0.01724439775910369) 100%)
+
+.slick-prev:hover, .slick-prev:focus
+  background: rgb(0,185,195)
+  background: linear-gradient(90deg, rgba(0,185,195,1) 20%, rgba(3,205,203,0.5942752100840336) 44%, rgba(0,212,255,0.4318102240896359) 73%, rgba(0,212,255,0.01724439775910369) 100%)
+
+.slick-list
+  border-radius: 5px
+
+.slick-prev:before, .slick-next:before
+  content: " "
+

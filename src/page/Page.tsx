@@ -8,6 +8,7 @@ import MusicPlayer from "@page/components/radio/musicPlayer.tsx";
 import {Container} from "@mui/material";
 import NewsComponent from "@page/components/news/newsComponent.tsx";
 import EventsComponent from "@page/components/events/eventsComponent.tsx";
+import AdvertsComponent from "@page/components/adverts/advertsComponent.tsx";
 function Page() {
     const {width} = useWindowSize();
     const videoUrls = [video5];
@@ -41,6 +42,9 @@ function Page() {
                 <p className={"kito-subtitle"}>&nbsp;&nbsp;Eventos</p>
                 <hr/>
                 <EventsComponent />
+                <p className={"kito-subtitle"}>&nbsp;&nbsp;Anuncios</p>
+                <hr/>
+                <AdvertsComponent />
             </Container>
 
         </div>
