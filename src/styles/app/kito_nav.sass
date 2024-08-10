@@ -1,0 +1,68 @@
+.nav-container 
+  display: flex
+  justify-content: center
+  padding: 0 20px 20px
+  background-color: #f8f8f8 /* Color de fondo del contenedor */
+
+
+.nav-bar 
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+
+
+.nav-bar a 
+  display: block
+  text-align: center
+  text-decoration: none
+  color: #fff /* Color del texto */
+  font-weight: bold
+  background-color: #333 /* Color de fondo del rombo */
+  position: relative
+  height: max-content
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%) /* Forma de rombo acostado */
+  width: 20em
+  margin-top: .5em
+  transition: background-color 0.3s ease
+  padding: 8px
+
+
+.nav-bar a:last-child 
+  margin-right: 0 /* Elimina el margen del último ítem */
+
+
+.nav-bar a:hover 
+  background-color: #555 /* Cambio de color al pasar el ratón */
+
+
+.nav-bar a.active
+  background-color: #555 /* Cambio de color al pasar el ratón */
+
+.content-container
+  background-color: #b1daff
+
+.content-text
+  @include font-lora-banner
+  font-size: 1.3em
+  text-align: justify
+  color: black
+  margin-bottom: .2em
+
+.content-btn-icon
+  &-whatsapp
+    background-color: #94fc76
+    margin-left: 1em
+    padding: 5px
+    margin-bottom: .2em
+    & svg
+      fill: white
+
+  &-zoom
+    background-color: #37c7ff
+    margin-right: 1em
+    padding: 5px
+    margin-bottom: .2em
+    & svg
+      fill: white
+

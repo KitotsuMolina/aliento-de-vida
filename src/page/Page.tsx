@@ -9,6 +9,10 @@ import {Container} from "@mui/material";
 import NewsComponent from "@page/components/news/newsComponent.tsx";
 import EventsComponent from "@page/components/events/eventsComponent.tsx";
 import AdvertsComponent from "@page/components/adverts/advertsComponent.tsx";
+import ImportantComponent from "@page/components/important/importantComponent.tsx";
+import {Button} from "@nextui-org/react";
+import {WhatsappBoldIcon} from "@icons/outline/icons.tsx";
+import Footer from "@page/components/footer/footer.tsx";
 function Page() {
     const {width} = useWindowSize();
     const videoUrls = [video5];
@@ -36,15 +40,39 @@ function Page() {
                     <br/>
                     {versic.text}
                 </p>
+                <ImportantComponent/>
                 <p className={"kito-subtitle"}>&nbsp;&nbsp;Noticias</p>
                 <hr/>
                 <NewsComponent/>
                 <p className={"kito-subtitle"}>&nbsp;&nbsp;Eventos</p>
                 <hr/>
-                <EventsComponent />
+                <EventsComponent/>
                 <p className={"kito-subtitle"}>&nbsp;&nbsp;Anuncios</p>
                 <hr/>
-                <AdvertsComponent />
+                <AdvertsComponent/>
+                <p style={{marginTop: '4em'}} className={"kito-subtitle"}>&nbsp;&nbsp;Peticiones de Oracion /
+                    Contactanos</p>
+                <hr/>
+                <p className={"kito-info"}>
+                    Envía tus peticiones de oración o Contactanos Directamente por Whatsapp
+                    <br/>
+                    <a href="https://wa.link/svx1xj" target={'_blank'}>
+                        <Button style={{
+                            marginTop: '.4em',
+                            backgroundColor: 'white',
+                            color: 'black',
+                            display: 'flex',
+                            alignContent: 'center',
+                            flexWrap: 'wrap',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                        }}>
+                            Whatsapp
+                            <WhatsappBoldIcon size={30} className={'icon-whatsapp'}></WhatsappBoldIcon>
+                        </Button>
+                    </a>
+                </p>
+                <Footer />
             </Container>
 
         </div>

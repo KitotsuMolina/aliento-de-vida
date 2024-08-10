@@ -21,9 +21,9 @@ const BannerComponent: React.FC<VideoPlayerProps> = ({ videoUrls, width, height 
     }, [videoUrls, interval]);*/
 
     const messages = [
-        'Mensaje 1: Este es un mensaje corto',
-        '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. Nuestras Reuniones de Oración son transmitidas vía Zoom los días miércoles y viernes a las 3 PM Colombia.',
-        'Mensaje 3: Otro mensaje para mostrar en la barra',
+        '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +
+        'Nuestras Reuniones de Oración son transmitidas vía Zoom los días miércoles y viernes a las 3 PM Colombia.',
+        'Recuerda que Si puedes creer, al que cree todo le es posible !!! Marcos cap 9:23'
     ];
     const delay = 5; // Ajusta el delay en segundos entre mensajes
     const speed = 40; // Ajusta la velocidad en pixels por segundo
