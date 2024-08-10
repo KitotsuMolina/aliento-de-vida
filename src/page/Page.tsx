@@ -13,6 +13,7 @@ import ImportantComponent from "@page/components/important/importantComponent.ts
 import {Button} from "@nextui-org/react";
 import {WhatsappBoldIcon} from "@icons/outline/icons.tsx";
 import Footer from "@page/components/footer/footer.tsx";
+import DailyVerses from "@page/components/dailyVersesComponent.tsx";
 function Page() {
     const {width} = useWindowSize();
     const videoUrls = [video5];
@@ -36,9 +37,7 @@ function Page() {
             />
             <Container maxWidth="lg" className={"kito-content"}>
                 <p className={"kito-info"}>
-                    {versic.title}
-                    <br/>
-                    {versic.text}
+                    <DailyVerses />
                 </p>
                 <ImportantComponent/>
                 <p className={"kito-subtitle"}>&nbsp;&nbsp;Noticias</p>
@@ -72,7 +71,7 @@ function Page() {
                         </Button>
                     </a>
                 </p>
-                <Footer />
+                <Footer/>
             </Container>
 
         </div>
