@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Container} from "@mui/material";
 import {Button} from "@nextui-org/react";
 import {WhatsappBoldIcon, ZoomBoldIcon} from "@icons/outline/icons.tsx";
+import {sectionsImplement} from "@utils/implements.tsx";
 
 const ImportantComponent: React.FC = () => {
 
@@ -10,11 +11,7 @@ const ImportantComponent: React.FC = () => {
     const [content, setContent] = useState<string>('Únete a nosotros este próximo sábado para un poderoso tiempo de oración intercesora por las familias cada día.');
     const [currentSection, setCurrentSection] = useState<string>('home');
 
-    const sections: Record<Section, string> = {
-        home: 'Únete a nosotros este próximo sábado para un poderoso tiempo de oración intercesora por las familias cada día.',
-        services: 'No te pierdas nuestro seminario especial este mes sobre cómo vivir una vida plena en la fe..',
-        projects: 'Disipulado Biblico todos los Sabados y Lunes (3pm - 4pm hora Colombiana), para ingresar dentro del horario ingresa al zoom o para agendar fuera del horario usa whatsapp '
-    };
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,7 +23,7 @@ const ImportantComponent: React.FC = () => {
 
     const changeContent = (section: Section) => {
             setCurrentSection(section);
-            setContent(sections[section]);
+            setContent(sectionsImplement[section]);
     };
 
     const changeContentAutomatically = () => {
@@ -34,7 +31,7 @@ const ImportantComponent: React.FC = () => {
         const currentIndex = sectionKeys.indexOf(currentSection as "home" | "services" | "projects");
         const nextIndex = (currentIndex + 1) % sectionKeys.length;
         setCurrentSection(sectionKeys[nextIndex]);
-        setContent(sections[sectionKeys[nextIndex]]);
+        setContent(sectionsImplement[sectionKeys[nextIndex]]);
     };
     return(
         <>

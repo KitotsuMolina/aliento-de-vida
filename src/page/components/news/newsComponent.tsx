@@ -58,6 +58,19 @@ const NewsComponent: React.FC = () =>{
         const matches = imgRegex.exec(htmlContent);
         return matches ? matches[1] : null; // Devuelve la URL de la primera imagen encontrada
     };
+
+    const formatUrlForGoogleTranslate = (url:string) => {
+        // Extraer el dominio y la ruta del URL original
+        const urlObj = new URL(url);
+        const domain = urlObj.hostname.replace(/\./g, '-');
+        const protocol = urlObj.protocol;
+        const path = urlObj.pathname;
+
+        // Formar la nueva URL con Google Translate
+        const newUrl = `${protocol}//${domain}.translate.goog${path}?_x_tr_sl=pt&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp`;
+
+        return newUrl;
+    }
     useEffect(() => {
         const fetchNews = async () => {
             try {
@@ -79,7 +92,8 @@ const NewsComponent: React.FC = () =>{
                         const translatedTitle = await translateText(article.title?article.title:'');
                         const translatedSnippet = await translateText(article.contentSnippet?article.contentSnippet:'');
                         const imageUrl = extractImageUrl(article.content || article.description || '');
-                        return { ...article, title: translatedTitle, contentSnippet: translatedSnippet, imageUrl };
+                        const formateLink = formatUrlForGoogleTranslate(article.link?article.link:'');
+                        return { ...article, title: translatedTitle, contentSnippet: translatedSnippet, imageUrl, link:formateLink };
                     })
                 );
 

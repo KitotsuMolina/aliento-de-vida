@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container} from "@mui/material";
 import MarqueeComponent from "@page/components/marquee/marqueeComponent.tsx";
+import {messagesImplement} from "@utils/implements.tsx";
 interface VideoPlayerProps {
     videoUrls: string[];
     width: string;
@@ -20,11 +21,6 @@ const BannerComponent: React.FC<VideoPlayerProps> = ({ videoUrls, width, height 
         return () => clearInterval(intervalId); // Cleanup interval on component unmount
     }, [videoUrls, interval]);*/
 
-    const messages = [
-        '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +
-        'Nuestras Reuniones de Oración son transmitidas vía Zoom los días miércoles y viernes a las 3 PM Colombia.',
-        'Recuerda que Si puedes creer, al que cree todo le es posible !!! Marcos cap 9:23'
-    ];
     const delay = 5; // Ajusta el delay en segundos entre mensajes
     const speed = 40; // Ajusta la velocidad en pixels por segundo
 
@@ -41,7 +37,7 @@ const BannerComponent: React.FC<VideoPlayerProps> = ({ videoUrls, width, height 
             />
             <Container className={"kito-banner-over flex justify-center justify-items-center"}>
                 <p className={"kito-banner-text"}>Aliento de Vida</p>
-                <MarqueeComponent className={"kito-banner-marquee"} messages={messages} delay={delay} speed={speed}/>
+                <MarqueeComponent className={"kito-banner-marquee"} messages={messagesImplement} delay={delay} speed={speed}/>
             </Container>
         </div>
     );
