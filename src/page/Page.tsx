@@ -19,12 +19,7 @@ function Page() {
     const videoUrls = [video5];
     const url = "https://a1.asurahosting.com:8410/radio.mp3"
 
-    const versic = {
-        title: `Isaías 41: 10(NVI)`,
-        text: `Así que no temas, porque yo estoy contigo;
-        no te angusties, porque yo soy tu Dios. Te fortaleceré y te ayudaré; te sostendré con mi diestra
-        victoriosa.`
-    }
+
 
   return (
         <div className={"kitotsu-main"}>
