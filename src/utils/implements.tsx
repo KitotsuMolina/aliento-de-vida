@@ -1,3 +1,7 @@
+import anunciate01 from "@assets/images/anunciate01.jpg";
+import anunciate02 from "@assets/images/anunciate02.png";
+import anunciate03 from "@assets/images/anunciate03.jpeg";
+
 export const messagesImplement = [
     '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +
     'Nuestras Reuniones de Oración son transmitidas vía Zoom los días miércoles y viernes a las 3 PM Colombia.',
@@ -19,3 +23,5 @@ export const eventosImplement = [
         aplication: 'zoom'
     }
 ]
+
+export const anunciosImplement = [anunciate01,anunciate02,anunciate03];
