@@ -1,6 +1,9 @@
 import anunciate01 from "@assets/images/anunciate01.jpg";
 import anunciate02 from "@assets/images/anunciate02.png";
 import anunciate03 from "@assets/images/anunciate03.jpeg";
+import libro from '@assets/images/book.jpg'
+
+export const anunciosImplement = [anunciate01,anunciate02,anunciate03,libro];
 
 export const messagesImplement = [
     '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +
@@ -21,7 +24,12 @@ export const eventosImplement = [
         desc: 'Únete a nosotros cada semana para explorar la palabra de Dios.',
         link: 'https://us02web.zoom.us/j/86311872783?pwd=c1hLVnJINkVvMXhwQW5YbGxCVXAzQT09',
         aplication: 'zoom'
+    },
+    {
+        title: 'Estudio Bíblico Presencial',
+        desc: 'Únete a nosotros cada semana para explorar la palabra de Dios.',
+        link: 'https://us02web.zoom.us/j/86311872783?pwd=c1hLVnJINkVvMXhwQW5YbGxCVXAzQT09',
+        aplication: 'zoom'
     }
 ]
 
-export const anunciosImplement = [anunciate01,anunciate02,anunciate03];

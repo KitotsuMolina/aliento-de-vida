@@ -18,7 +18,7 @@ import book from '@assets/images/book.jpg';
 import Parser from 'rss-parser';
 import axios from 'axios';
 
-const RSSFeedUrl = 'https://www.faithwire.com/feed'; // Reemplaza con la URL del RSS feed real
+const RSSFeedUrl = 'https://www.faithwire.com/feed/'; // Reemplaza con la URL del RSS feed real
 interface ArticleProps {
     creator: string;
     title: string;
@@ -31,6 +31,25 @@ interface ArticleProps {
     isoDate: string;
     imageUrl: string | null;
 }
+const optionsFEED = {
+    url: 'https://www.faithwire.com/feed/',
+    method: 'GET',
+    headers: {
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7',
+        'origin': 'http://localhost:4000',
+        'priority': 'u=1, i',
+        'referer': 'http://localhost:4000/',
+        'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Brave";v="128"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Linux"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'cross-site',
+        'sec-gpc': '1',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    }
+};
 const NewsComponent: React.FC = () =>{
     const [articles, setArticles] = useState<ArticleProps[]>([]);
     const [loading, setLoading] = useState(true);
@@ -75,9 +94,7 @@ const NewsComponent: React.FC = () =>{
         const fetchNews = async () => {
             try {
                 // Obtener el feed RSS como texto
-                const response = await axios.get(RSSFeedUrl, {
-                    responseType: 'text',
-                });
+                const response = await axios(optionsFEED);
                 const rssContent = response.data;
 
                 // Limpiar contenido no deseado
