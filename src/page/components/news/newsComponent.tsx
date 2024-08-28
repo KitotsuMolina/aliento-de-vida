@@ -18,7 +18,7 @@ import book from '@assets/images/book.jpg';
 import Parser from 'rss-parser';
 import axios from 'axios';
 
-const RSSFeedUrl = 'https://www.faithwire.com/feed/'; // Reemplaza con la URL del RSS feed real
+// const RSSFeedUrl = 'https://www.faithwire.com/feed/'; // Reemplaza con la URL del RSS feed real
 interface ArticleProps {
     creator: string;
     title: string;
