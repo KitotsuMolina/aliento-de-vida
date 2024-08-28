@@ -77,7 +77,6 @@ const NewsComponent: React.FC = () =>{
             try {
                 // Obtener el feed RSS como texto
                 const response = await axios.get(RSSFeedUrl, {
-
                     responseType: 'text',
                 });
                 const rssContent = response.data;
