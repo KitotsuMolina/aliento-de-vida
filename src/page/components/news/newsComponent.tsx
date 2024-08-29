@@ -117,18 +117,12 @@ const NewsComponent: React.FC = () =>{
 
     return (
         <>
-            <Container style={{backgroundImage: `url(${url})`}} className={'kito-new'}>
-                <div className={'kito-new-over '}>
-                    <div className={'kito-new-info'}>
-                        <p className={'kito-new-title'}>{articles[0].title}</p>
-                        <p className={'kito-new-text'}>
-                            {articles[0].contentSnippet}
-                            <a target={'_blank'} href={articles[0].link}>
-                                {"  Leer mas...."}
-                            </a>
-                        </p>
-                    </div>
-                </div>
+
+            <Container style={{   display: 'flex',
+                alignContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center'}} className={'kito-new'}>
+                <CardComponent id={999} contentSnippet={articles[0].contentSnippet} link={articles[0].link} title={articles[0].title}/>
             </Container>
             <div className={'kito-news-container'}
             >

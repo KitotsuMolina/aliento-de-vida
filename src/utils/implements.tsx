@@ -1,9 +1,10 @@
 import anunciate01 from "@assets/images/anunciate01.jpg";
 import anunciate02 from "@assets/images/anunciate02.png";
 import anunciate03 from "@assets/images/anunciate03.jpeg";
+import anunciate04 from "@assets/images/anunciospublicitariosbachoco.webp";
 import libro from '@assets/images/book.jpg'
 
-export const anunciosImplement = [anunciate01,anunciate02,anunciate03,libro];
+export const anunciosImplement = [anunciate01,anunciate02,anunciate03,anunciate04];
 
 export const messagesImplement = [
     '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +

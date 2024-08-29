@@ -15,6 +15,54 @@
   bottom: 0
   width: 100vw
   left: 0
-  background: white
+  background: #5fd0eb
   color: black
+
+
+.kito-range-player
+  -webkit-appearance: none
+  width: 100%
+  height: 3px
+  border-radius: 5px
+  background: #d3d3d3
+  outline: none
+  opacity: 0.7
+  -webkit-transition: .2s
+  transition: opacity .2s
+
+
+.kito-range-player:hover 
+  opacity: 1
+
+
+.kito-range-player::-webkit-slider-thumb 
+  -webkit-appearance: none
+  appearance: none
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  background: #a4f3eb
+  cursor: pointer
+  box-shadow: 0px 0px 11px 8px rgba(0,0,0,0.26)
+  background-size: 45%
+  background-position: center
+  background-repeat: no-repeat
+
+
+.kito-range-player::-moz-range-thumb
+  width: 45px
+  height: 45px
+  border-radius: 50%
+  background: #a4f3eb
+  cursor: pointer
+  box-shadow: 0px 0px 11px 8px rgba(0,0,0,0.26)
+  background-size: 45%
+  background-position: center
+  background-repeat: no-repeat
+
+  
+
+
+
+
 //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.7455357142857143) 35%, rgba(0,212,255,0.639093137254902) 100%)

@@ -57,13 +57,13 @@ const boxShadowAnimation = keyframes`
 
 const waveAnimation = keyframes`
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 128, 255, 0.7), 0 0 0 10px rgba(0, 128, 255, 0.1), 0 0 0 20px rgba(0, 128, 255, 0.1), 0 0 0 30px rgba(0, 128, 255, 0.1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(0, 128, 255, 0.1);
     }
     50% {
-        box-shadow: 0 0 0 10px rgba(0, 128, 255, 0), 0 0 0 20px rgba(0, 128, 255, 0.7), 0 0 0 30px rgba(0, 128, 255, 0.1), 0 0 0 40px rgba(0, 128, 255, 0.1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0), 0 0 0 20px rgba(254, 254, 255, 0.7), 0 0 0 30px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(0, 128, 255, 0.7), 0 0 0 10px rgba(0, 128, 255, 0.1), 0 0 0 20px rgba(0, 128, 255, 0.1), 0 0 0 30px rgba(0, 128, 255, 0.1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1);
     }
 `;
 
@@ -189,6 +189,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
                         }}>
                             <span>{formatTime(currentTime)}</span>
                             <input
+                                className={'kito-range-player'}
                                 type="range"
                                 min="0"
                                 max={type == 'podcast' ? currentTime : duration}
@@ -210,6 +211,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({type,url, controls}) => {
             }}>
                 <span>{formatTime(currentTime)}</span>
                 <input
+                    className={'kito-range-player'}
                     type="range"
                     min="0"
                     max={type == 'podcast' ? currentTime : duration}
