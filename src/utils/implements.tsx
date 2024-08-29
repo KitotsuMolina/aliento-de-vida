@@ -14,7 +14,7 @@ type Section = 'home' | 'services' | 'projects';
 export const  sectionsImplement: Record<Section, string> = {
     home: 'Únete a nosotros este próximo sábado para un poderoso tiempo de oración intercesora por las familias cada día.',
     services: 'No te pierdas nuestro seminario especial este mes sobre cómo vivir una vida plena en la fe..',
-    projects: 'Disipulado Biblico todos los Sabados y Lunes (3pm - 4pm hora Colombiana), para ingresar dentro del horario ingresa al zoom o para agendar fuera del horario usa whatsapp '
+    projects: 'Discipulado Biblico todos los Sabados y Lunes (3pm - 4pm hora Colombiana), para ingresar dentro del horario ingresa al zoom o para agendar fuera del horario usa whatsapp '
 };
 
 export const eventosImplement = [
