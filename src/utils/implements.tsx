@@ -33,3 +33,10 @@ export const eventosImplement = [
     }
 ]
 
+
+
+//cd Proyectos/aliento-de-vida-main
+//  npm run build   comando para compilar actualizar 
+//firebase login solo si no esta logiado
+//firebase deploy para actualizar pagina
+//lcontrol R+f5  limpia cache
