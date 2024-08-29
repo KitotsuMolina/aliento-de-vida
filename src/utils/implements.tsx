@@ -1,9 +1,8 @@
 import anunciate01 from "@assets/images/anunciate01.jpg";
 import anunciate02 from "@assets/images/anunciate02.png";
 import anunciate03 from "@assets/images/anunciate03.jpeg";
-import libro from '@assets/images/book.jpg'
 
-export const anunciosImplement = [anunciate01,anunciate02,anunciate03,libro];
+export const anunciosImplement = [anunciate01,anunciate02,anunciate03];
 
 export const messagesImplement = [
     '¡Bienvenido a Radio Aliento de Vida! Escucha nuestras transmisiones en vivo y mantente informado. ' +
@@ -15,7 +14,7 @@ type Section = 'home' | 'services' | 'projects';
 export const  sectionsImplement: Record<Section, string> = {
     home: 'Únete a nosotros este próximo sábado para un poderoso tiempo de oración intercesora por las familias cada día.',
     services: 'No te pierdas nuestro seminario especial este mes sobre cómo vivir una vida plena en la fe..',
-    projects: 'Disipulado Biblico todos los Sabados y Lunes (3pm - 4pm hora Colombiana), para ingresar dentro del horario ingresa al zoom o para agendar fuera del horario usa whatsapp '
+    projects: 'Discipulado Biblico todos los Sabados y Lunes (3pm - 4pm hora Colombiana), para ingresar dentro del horario ingresa al zoom o para agendar fuera del horario usa whatsapp '
 };
 
 export const eventosImplement = [
