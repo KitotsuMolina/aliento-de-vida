@@ -14,7 +14,6 @@ export default NewsComponent*/
 import React, { useState, useEffect } from 'react';
 import CardComponent from "@page/components/news/cardsComponent.tsx";
 import {Container} from "@mui/material";
-import book from '@assets/images/book.jpg';
 import Parser from 'rss-parser';
 import axios from 'axios';
 
@@ -36,7 +35,6 @@ const NewsComponent: React.FC = () =>{
     const [articles, setArticles] = useState<ArticleProps[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const url = book
     const DEEPL_API_KEY = 'bf16ec96-cf81-4f68-98a0-03ccad3c6db1:fx'; // Reemplaza con tu clave de API de DeepL
     const DEEPL_API_URL = 'https://api-free.deepl.com/v2/translate';
     const translateText = async (text:string) => {
